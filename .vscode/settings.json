@@ -8,7 +8,7 @@
             "editorInlayHint.background": "#75757548",
             // Overrides for specific kinds of inlay hints
             "editorInlayHint.typeForeground": "#ffffffa0",
-            "editorInlayHint.parameterForeground": "#05f692f0",
+            "editorInlayHint.parameterForeground": "#76f9c5f0",
         }
     },
     "[rust]": {
