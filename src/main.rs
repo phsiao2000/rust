@@ -1,4 +1,8 @@
+pub mod code2;
+use crate::code2::inc_and_tax;
+
 use std::{collections::HashMap, error::Error};
+
 #[derive(Clone, Debug)]
 struct Order<'a> {
     name: &'a str,
@@ -51,6 +55,12 @@ fn main() -> Result<(), Box<dyn Error>> {
             name: "Whole Wheat Bread",
         },
     ];
+    let all_prices:Vec<_> = prices.clone()
+        .into_iter()
+        .filter(|&(name, _)| name != "Cake")
+        .map(|(_, price)| price)
+        .collect();
+    println!("price filtered {:?}", all_prices);
     let total_price = order_sweets(&order, &prices);
     println!("{:?}", total_price);
     println!("{:?}", prices);
@@ -69,5 +79,7 @@ fn main() -> Result<(), Box<dyn Error>> {
 
     thread::sleep(Duration::from_secs(SLEEP2 as u64));
     println!("Hello from the main thread (after {SLEEP2} seconds)!");
+
+    println!("{}", inc_and_tax(95.0));
     Ok(())
 }
