@@ -1,0 +1,18 @@
+{
+    //"editor.inlayHints.fontFamily": "Courier New",
+    "editor.inlayHints.fontSize": 11,
+    "workbench.colorCustomizations": {
+        // Name of the theme you are currently using
+        "[Default Dark+]": {
+            "editorInlayHint.foreground": "#868686f0",
+            "editorInlayHint.background": "#75757548",
+            // Overrides for specific kinds of inlay hints
+            "editorInlayHint.typeForeground": "#ffffffa0",
+            "editorInlayHint.parameterForeground": "#76f9c5f0",
+        }
+    },
+    "[rust]": {
+        "editor.defaultFormatter": "rust-lang.rust-analyzer", // Makes the magic
+        "editor.formatOnSave": true // Optional
+    },
+}
